@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;700&display=swap');
+
+
+
+.layout {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+    display: grid;
+    grid:
+      "header" auto
+      "main" 1fr
+      "footer" auto
+      / 1fr;
+    gap: 8px;
+  }
+
+  .header { grid-area: header;
+    background-color: #333;
+    
+  
+  
+  }
+  .main { grid-area: main;
+  
+  
+  
+  }
+  .footer { grid-area: footer; 
+    background-color: #333;
+  
+  
+  
+  }
+
+  @media screen and (max-width: 768px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Estilos generales */
+.container {
+  width: 100%;
+}
+
+
+.social-media{
+  color: white;
+}
+/* Aplica la imagen de fondo al body */
+body {
+  background-image: url('Img/fondo.png.png');
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el body */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fija la imagen de fondo */
+}
+
+/* Aplica un desenfoque al fondo sin afectar el contenido */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+  backdrop-filter: blur(5px); /* Aplica un desenfoque al fondo */
+}
+
+.caja {
+  width: 100%;
+  max-width: 900px; /* Ancho máximo para mantenerlo responsive */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ebf8ff;
+  border: 8px solid #727b7e;
+  border-radius: 1px;
+  
+}
+
+/* Cambia el color de fondo de los demás acordeones a otro color */
+.custom-accordion .accordion-item:nth-child(3),
+.custom-accordion .accordion-item:nth-child(4),
+.custom-accordion .accordion-item:nth-child(5) {
+  background-color: #fafafd; /* Cambia el color de fondo para los demás acordeones (azul en este caso) */
+}
+
+
+
+/* Cambia el color del texto dentro del contenido del acordeón a negro */
+.custom-accordion .accordion-body {
+  color: #000; /* Color del texto negro dentro del contenido del acordeón */
+}
+/* Tipografia de titulo */
+.custom-h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px; 
+  font-weight: 600; /* Ejemplo de peso de fuente personalizado (600 es el peso semibold) */
+}
+
+/* Definir la fuente Open Sans para custom-p */
+.custom-p {
+  font-family: 'Open Sans', sans-serif;
+  /* Puedes ajustar otros estilos de fuente si es necesario, como tamaño y peso de la fuente. */
+  font-size: 18px; /* Ejemplo de tamaño de fuente personalizado */
+  font-weight: 400; /* Ejemplo de peso de fuente personalizado (400 es el peso regular) */
+  color: #000;
+}
+
+/* Ejemplo de media query para tamaños de pantalla más pequeños */
+@media (max-width: 768px) {
+
+}
+/* Cambia el color del cursor a amarillo cuando se hace hover sobre los enlaces */
+.nav-link:hover {
+  color: #ffd700; /* Color de texto amarillo */
+}
+.nav-link:hover {
+  cursor: pointer;
+}
+.titulo {
+ 
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px; 
+}

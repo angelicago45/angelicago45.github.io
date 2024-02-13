@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+/* 
+font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+.layout {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+    display: grid;
+    grid:
+      "header" auto
+      "main" 1fr
+      "footer" auto
+      / 1fr;
+    gap: 8px;
+  }
+
+
+
+body {
+    background-image: url(img/bg-blur2.png);
+    
+    
+    
+}
+.body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+  
+  }
+
+
+.header { grid-area: header;
+    background-color: #333;
+    
+  
+  
+  }
+  
+
+.footer{
+    grid-area: footer;
+    background-color: #333;
+    padding: 20px 8%;
+    width: 100%;
+    height: 100px;
+    background: #242424;
+    display: flex;
+    position: absolute;
+    
+    margin-top: auto;
+    top: 2580px;
+}
+
+
+
+.content {
+   position: relative;
+   z-index: 3;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 220px;  
+}
+
+div .logo2 {
+    width: 30%;
+    
+}
+
+/* cambiar el boton de comprar en pixel art */
+
+
+.back-video {
+    overflow: hidden;
+    background-color: #a4a4a4;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+}
+
+
+
+
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+}
+} 
+
+
+.main2 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: auto;
+    top: 570px;
+    background-color: #ebf8ff;
+    border: 8px solid #727b7e;
+    z-index: -2;
+    width: 90%;
+    height: auto;
+
+    
+}
+
+.content-mitad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    text-align: center;    
+}
+
+.content a {
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    font-weight: 800;
+
+    margin-top: 18px;
+    padding: 20px;
+    background-color: #ECC32F;
+
+}
+
+.content a:hover {
+    background-color: #C1272D;
+}
+
+.titulo-azul {
+    margin-top: 2%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 36px;
+    color: #0866CC;
+
+}
+
+
+.par1 {
+    width: 40%;
+    font-family: 'Open Sans', sans-serif; 
+    padding: 1%;
+    line-height: 2;
+}
+
+.funciones-text {
+    width: 60%;
+    line-height: 2;
+}
+
+.content-mitad p, span {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content-mitad span {
+    color: #0866CC;
+    font-weight: 800;
+}
+
+
+
+.consoles-flex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+        
+}
+
+.consoles-flex img {
+    max-width: 100px;
+    width: auto;
+    height: max-content;
+    margin: 0px 40px;
+    
+}
+
+.consoles1 {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.consoles2 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+}
+
+
+.consoles2 img{
+    margin: 0px 10px;
+}
+.consoles3 {
+    margin-bottom: 2%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+}
+
+.consoles3 img {
+    margin: 0px 10px;
+    max-height: 120px;
+}
+
+
+.footer {
+    padding: 20px 8%;
+    width: 100%;
+    height: 100px;
+    background: #242424;
+    display: flex;
+    position: absolute;
+    
+    margin-top: auto;
+    top: 2580px;
+}
+
+
+
+footer ul li {
+    display: inline-block;
+
+    margin-left: 30px;
+    
+
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    
+}
+
+footer ul li a {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+footer ul li p {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
